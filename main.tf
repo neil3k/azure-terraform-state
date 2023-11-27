@@ -3,8 +3,14 @@ resource "azurerm_resource_group" "tf-state" {
   location = "West Europe"
 }
 
+resource "random_string" "resource_code" {
+  length  = 5
+  special = false
+  upper   = false
+}
+
 resource "azurerm_storage_account" "tf-state" {
-  name                            = "terraformstate"
+  name                            = "terraformstate${random_string.resource_code.result}"
   resource_group_name             = azurerm_resource_group.tf-state.name
   location                        = azurerm_resource_group.tf-state.location
   account_tier                    = "Standard"
