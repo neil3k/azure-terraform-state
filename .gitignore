@@ -36,3 +36,4 @@ terraform.rc
 *.hcl
 *.xml
 *.xml
+*.iml
