@@ -16,6 +16,13 @@ resource "azurerm_storage_account" "tf-state" {
   account_tier                    = "Standard"
   account_replication_type        = "LRS"
   allow_nested_items_to_be_public = false
+
+  tags = merge(
+    var.common_tags,
+    {
+      Name = "${var.name}-virtual-network"
+    }
+  )
 }
 
 resource "azurerm_storage_container" "tf-state" {
