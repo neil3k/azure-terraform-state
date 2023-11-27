@@ -20,7 +20,7 @@ resource "azurerm_storage_account" "tf-state" {
   tags = merge(
     var.common_tags,
     {
-      Name = "${var.name}-virtual-network"
+      Name = "${var.name}-storage-account"
     }
   )
 }
