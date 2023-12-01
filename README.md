@@ -53,10 +53,11 @@ No Requirements
 
 ## Inputs
 
-| Name                        | Description | Type         | Default | Required |
-|-----------------------------|-------------|--------------|---------|----------|
-| name                        | n/a         | string       | n/a     | yes      |
-| common_tags                 | n/a         | map(string)  | n/a     | yes      |
+| Name        | Description | Type        | Default | Required |
+|-------------|-------------|-------------|---------|----------|
+| name        | n/a         | string      | n/a     | yes      |
+| common_tags | n/a         | map(string) | n/a     | yes      |
+| location    | n/a         | string      | n/a     | yes      |
 
 ## Outputs
 

@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "this" {
   name     = "terraform-state"
-  location = "West Europe"
+  location = var.location
 }
 
 resource "random_string" "this" {
